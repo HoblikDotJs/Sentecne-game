@@ -2,6 +2,8 @@
   "name": "react-redux-typescipt",
   "version": "0.1.0",
   "private": true,
+  "author": "David Hybler",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -10,9 +12,12 @@
     "@types/node": "^12.20.19",
     "@types/react": "^17.0.18",
     "@types/react-dom": "^17.0.9",
+    "@types/react-redux": "^7.1.18",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
     "react-scripts": "4.0.3",
+    "redux": "^4.1.1",
     "typescript": "^4.3.5",
     "web-vitals": "^1.1.2"
   },
