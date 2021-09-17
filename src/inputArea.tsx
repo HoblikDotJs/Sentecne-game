@@ -1,12 +1,14 @@
 import React, { ChangeEvent, FC } from "react";
-import { inputInterface } from "./types";
-import { store } from "./store";
+import { useDispatch } from "react-redux";
+import { InputInterface } from "./types";
 
-export const InputArea: FC<inputInterface> = ({ answer, index }): JSX.Element => {
+
+export const InputArea: FC<InputInterface> = ({ answer, index }) => {
+    const dispatch = useDispatch();
     const keys = Object.keys(answer) as Array<keyof typeof answer>;
     const value = answer[keys[index]]
     const updateAnswer = (event: ChangeEvent<HTMLInputElement>) => {
-        store.dispatch({ type: "CHANGE_ANSWER", payload: event.target.value, index })
+        dispatch({ type: "CHANGE_ANSWER", payload: event.target.value, index })
     }
 
     return <div className="inputArea">

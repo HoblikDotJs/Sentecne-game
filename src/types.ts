@@ -4,28 +4,28 @@ export interface Action {
   index?: 0 | 1 | 2 | 3;
 }
 
-type answer = {
+type Answer = {
   who: string;
   what: string;
   where: string;
   when: string;
 };
 
-export interface stateInterface {
+export interface StateInterface {
   index: 0 | 1 | 2 | 3;
-  answer: answer;
+  answer: Answer;
 }
 
-export interface questionInterface {
+export interface QuestionInterface {
   index: 0 | 1 | 2 | 3;
-  answer: answer;
+  answer: Answer;
 }
 
-export interface inputInterface {
+export interface InputInterface {
   index: 0 | 1 | 2 | 3;
-  answer: answer;
+  answer: Answer;
 }
 
 export interface sentenceInterface {
-  answer: answer;
+  answer: Answer;
 }

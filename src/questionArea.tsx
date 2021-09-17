@@ -1,19 +1,20 @@
 import React, { FC } from "react";
-import { questionInterface } from "./types";
-import { store } from "./store";
+import { useDispatch } from "react-redux";
+import { QuestionInterface } from "./types";
 
 const QUESTIONS = ["Who?", "What?", "Where?", "When?"]
 
-export const QuestionArea: FC<questionInterface> = ({ answer, index }) => {
+export const QuestionArea: FC<QuestionInterface> = ({ answer, index }) => {
+    const dispatch = useDispatch();
     const focusInput = () => {
-        document.getElementById("inputField")?.focus()
+        document.getElementById("inputField")?.focus() //Ref forwarding?
     }
     const decreaseIndex = () => {
-        store.dispatch({ type: "DECREMENT" })
+        dispatch({ type: "DECREMENT" })
         focusInput()
     }
     const increaseIndex = () => {
-        store.dispatch({ type: "INCREMENT" })
+        dispatch({ type: "INCREMENT" })
         focusInput()
     }
     const keys = Object.keys(answer) as Array<keyof typeof answer>
